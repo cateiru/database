@@ -19,7 +19,7 @@ PostgreSQL
 - OSS
 - 標準SQLの大部分をサポートしている。
 
-### PostgreSQL インストール
+## PostgreSQL インストール
 
 ```bash
 # postgreSQL
@@ -31,7 +31,7 @@ brew install pgadmin4 --cask
 
 [PGAdmin4の日本語化](https://qiita.com/sanapuuu/items/4e43f6ed0cf0a597efb5)
 
-### PostgreSQL の起動停止
+## PostgreSQL の起動停止
 
 ```bash
 # macOS の場合
@@ -45,7 +45,7 @@ brew services stop postgresql
 brew services list
 ```
 
-### データベース内に入る
+## データベース内に入る
 
 ```bash
 # データベース一覧を表示
@@ -63,3 +63,36 @@ psql 入りたいデータベース名
 # データベースから抜ける
 > \q
 ```
+
+## 新しくデータベースを作成する、削除する
+
+```bash
+# 追加
+createdb [db name] -O postgres
+
+# 削除
+dropdb [db name]
+```
+
+## サーバーを起動してクライアントから開く
+
+1. [PostgreSQL の起動](#PostgreSQL\sの起動停止)
+2. `psql -l`でユーザー名確認
+
+   ```bash
+    ~/G/database ❯❯❯ psql -l
+
+     List of databases
+     Name    | Owner  | Encoding | Collate | Ctype | Access privileges
+     -----------+--------+----------+---------+-------+-------------------
+    postgres  | yuto_w | UTF8     | C       | C     |
+    template0 | yuto_w | UTF8     | C       | C     | =c/yuto_w        +
+              |        |          |         |       | yuto_w=CTc/yuto_w
+    template1 | yuto_w | UTF8     | C       | C     | =c/yuto_w        +
+              |        |          |         |       | yuto_w=CTc/yuto_w
+    (3 rows)
+    ```
+
+  owner
+3. PgAdmin4から以下のように設定し起動
+  ![image](スクリーンショット%202021-04-12%2019.10.36.png)
