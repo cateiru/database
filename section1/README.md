@@ -76,7 +76,7 @@ dropdb [db name]
 
 ## サーバーを起動してクライアントから開く
 
-1. [PostgreSQL の起動](#PostgreSQL\sの起動停止)
+1. [PostgreSQL の起動](#PostgreSQL%20の起動停止)
 2. `psql -l`でユーザー名確認
 
    ```bash
