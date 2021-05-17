@@ -20,7 +20,7 @@ INSERT INTO SampleLike (strcol) VALUES ('abddc');
 COMMIT;
 
 -- 確認
-SELECT * FROM SampleMath;
+SELECT * FROM SampleLike;
 
 -- List6-22 LIKEによる前方一致検索
 
@@ -45,7 +45,7 @@ SELECT *
 SELECT *
   FROM SampleLike
  WHERE strcol LIKE 'abc__';
- 
+
 -- List6-26　「abc＋任意の3文字」を検索
 
 SELECT *
@@ -87,7 +87,7 @@ SELECT 商品名, 仕入単価
 SELECT 商品名, 仕入単価
   FROM 商品
  WHERE 仕入単価 IN (320, 500, 5000);
- 
+
 -- List6-33 NOT INで検索時に除外する仕入単価を複数指定して検索
 
 SELECT 商品名, 仕入単価
@@ -128,15 +128,15 @@ COMMIT;
 -- 「大阪店に置いてある商品の販売単価」を求める
 SELECT 商品名, 販売単価
   FROM 商品
- WHERE 商品ID IN (SELECT 商品ID 
+ WHERE 商品ID IN (SELECT 商品ID
                    FROM 店舗商品
                   WHERE 店舗ID = '000C');
-				  
+
 -- List6-37　NOT INの引数にサブクエリを使う
 
 SELECT 商品名, 販売単価
   FROM 商品
- WHERE 商品ID NOT IN (SELECT 商品ID 
+ WHERE 商品ID NOT IN (SELECT 商品ID
                        FROM 店舗商品
                       WHERE 店舗ID = '000A');
 

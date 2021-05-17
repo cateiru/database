@@ -19,7 +19,7 @@ SELECT TS.店舗ID, TS.店舗名, TS.商品ID, S.商品名, S.販売単価
   FROM 店舗商品 TS INNER JOIN 商品 S
     ON TS.商品ID = S.商品ID
  WHERE TS.店舗ID = '000A';
- 
+
 -- 別の書き方
 SELECT TS.店舗ID, TS.店舗名, TS.商品ID, S.商品名, S.販売単価
   FROM 店舗商品 TS, 商品 S
@@ -70,7 +70,7 @@ INSERT INTO 在庫商品 (倉庫ID, 商品ID, 在庫数量) VALUES ('S002',	'000
 INSERT INTO 在庫商品 (倉庫ID, 商品ID, 在庫数量) VALUES ('S002',	'0008',	18);
 
 COMMIT;
- 
+
 -- List7-14　3つのテーブルを内部結合する
 
 SELECT TS.店舗ID, TS.店舗名, TS.商品ID, S.商品名, S.販売単価, ZS.在庫数量

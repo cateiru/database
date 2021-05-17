@@ -49,7 +49,7 @@ SELECT 商品ID, 商品名
 UNION ALL
 SELECT 商品ID, 商品名
   FROM 商品2;
-  
+
 -- List7-6　INTERSECTによるテーブル共通部分の選択
 
 SELECT 商品ID, 商品名
