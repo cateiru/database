@@ -6,13 +6,13 @@ public class DBConnect3{
      public static void main(String[] args) throws Exception {
 
           /* 1) PostgreSQLへの接続情報 */
-          Connection con; 
+          Connection con;
           Statement st;
 
           String url = "jdbc:postgresql://localhost:5432/shop";
-          String user = "postgres";
-          String password = ""; 
-          
+          String user = "yuto_w";
+          String password = "";
+
 
           /* 2) JDBCドライバの定義 */
           Class.forName("org.postgresql.Driver");

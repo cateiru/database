@@ -16,7 +16,7 @@ public class DBConnect1 {
           ResultSet rs;
 
           String url = "jdbc:postgresql://localhost:5432/postgres";
-          String user = "postgres";
+          String user = "yuto_w";
           String password = "";
 
           /* 2) JDBCドライバの定義 */
