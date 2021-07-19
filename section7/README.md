@@ -25,4 +25,3 @@
 ```bash
 javac DBConnect1.java -cp postgresql-42.2.20.jar
 ```
-
